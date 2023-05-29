@@ -1,4 +1,4 @@
-# APIs Client Gateway
+# APIs Client Gateway.
 
 Welcome to our cutting-edge application powered by FastAPI, Alembic, SQLAlchemy, and integrated with various Amazon Web Services (AWS) such as S3, SES, and SNS. 
 
