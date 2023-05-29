@@ -1,0 +1,30 @@
+version: "3"
+services:
+  api_client_gateway:
+    container_name: api_client_gateway
+    image: 'api_client_gateway:${API_VERSION}'
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: backend.dockerfile
+    command:
+      - /bin/sh
+      - -c
+      - |
+        gunicorn app.main:app --workers 2 -k uvicorn.workers.UvicornWorker -b 0.0.0.0:${PORT}
+    ports:
+      - ${PORT}:${PORT}
+    networks:
+      - web
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.api_client_gateway.rule=Host(`${HOST}`) && PathPrefix(`${API_PATH}`)
+      - traefik.http.routers.api_client_gateway.entrypoints=web
+
+networks:
+  web:
+    external: true

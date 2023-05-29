@@ -1,0 +1,45 @@
+########### API ###########
+API_VERSION=1.0.0
+API_PATH=/api_client_gateway
+API_DOC=/api_client_gateway/docs
+HOST=app.demodecent.com
+DEFAULT_NETWORK=web
+PORT=9091
+SERVER_ROLE=DEV
+
+##### ACCESS EXAMPLE ##
+# dedee.dev.001@developer.com
+# XXXXXX
+
+# dedee.dev.002@developer.com
+# XXXXXX
+
+#### AWS ####
+### S3
+AWS_KEY_ID=XXXXXX
+AWS_KEY_SECRET=XXXXXX
+AWS_REGION=ap-southeast-1
+
+BUCKET_NAME_SYSTEM=storage-system-dedee-001
+BUCKET_NAME_CLIENT_IMAGES=client-images-dedee-001
+BUCKET_NAME_CLIENT_CLIPS=client-videos-dedee-001
+XXXXXX
+### SES
+SES_NAME=ses-smtp-user.20230226-191527
+SES_USERNAME=XXXXXX
+SES_PASSWORD=XXXXXX
+SES_ENDPOINT=email-smtp.ap-southeast-1.amazonaws.com
+CF_EMAIL_SENDER=verify@XXXXXX.com
+
+### SNS
+SNS_ACCESS_KEY=XXXXXX
+SNS_SECRET_KEY=XXXXXX
+
+############################
+
+########### DATABASE-PosgreSQL ###########
+DATABASE_NAME=postgres
+DATABASE_SERVER=ap-database-001.XXXXXX.ap-southeast-1.rds.amazonaws.com
+DATABASE_USERNAME=XXXXXX
+DATABASE_PASSWORD=XXXXXX
+DATABASE_PORT=5432
