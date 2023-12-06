@@ -1,4 +1,4 @@
-Certainly! Here's a format for the `README.md` file for the "backend-tiktok-clone-fastapi" project:
+The "backend-tiktok-clone-fastapi" project:
 
 ```markdown
 # Backend TikTok Clone - FastAPI
@@ -56,5 +56,4 @@ docker-compose down
 ```
 ### To Uninstall
 ```
-docker stack rm <stack name>
-```
+docker stack rm <stack_name>
